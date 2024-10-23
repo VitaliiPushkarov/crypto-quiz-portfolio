@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Bureau</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slider">
+
+        <div class="status-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="slide active bg-img" id="start">
+            <div class="center-align">
+                <div class="all-text-wrapper">
+                    
+                    <div class="text-wrapper">
+                        <p class="paragraph-big">Добро пожаловать в мир трейдинга и инвестиций с нашими экспертами!</p>
+                        <p class="paragraph">Начните свой путь к финансовой независимости уже сегодня.</p>
+                        <p class="paragraph">Наш курс предназначен для тех, кто хочет освоить искусство трейдинга и инвестиций с нуля или углубить уже имеющиеся знания. Мы предлагаем вам системное и практическое обучение, охватывающее все аспекты финансовых рынков, от базовых принципов до сложных торговых стратегий.
+
+                        </p>
+                    </div>
+                    <button class="start-quiz is-blicked" id="startButton" onclick="nextSlide('slide1')">
+                        пройти опрос</button>
+                </div>
+                <div class="img-wrapper">
+                    <img src="img/crypto-img-1.jpg" alt="crypto" class="hero-img border-top-left">
+                    <img src="img/crypto-img-2.jpg" alt="crypto" class="hero-img">
+                    <img src="img/crypto-img3.jpg" alt="crypto" class="hero-img">
+                    <img src="img/crypto-img-4.jpg" alt="crypto" class="hero-img border-bottom-right">
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="slide1">
+            <div class="slide-wrapper">
+                <h2>Какой у вас опыт работы с инвестициями?
+                </h2>
+            </div>
+            <ul>
+                <li><button class="button-answer" data-answer="begginer" onclick="nextSlide('slide2', 'beginner')">Никогда не инвестировал</button></li>
+                <li><button class="button-answer" data-answer="basic" onclick="nextSlide('slide2', 'basic')">Имею базовые знания и немного опыта
+                </button></li>
+                <li><button class="button-answer" data-answer="intermediate" onclick="nextSlide('slide2', 'intermediate')">Время от времени занимаюсь инвестициями</button></li>
+                <li><button class="button-answer" data-answer="advanced" onclick="nextSlide('slide2', 'advanced')">Регулярно инвестирую и изучаю новые возможности</button></li>
+            </ul>
+        </div>
+        <div class="slide" id="slide2">
+            <div class="slide-wrapper">
+                <h2>Что вы хотите улучшить с помощью нашего курса?
+
+                </h2>
+            </div>
+            <ul>
+                <li><button class="button-answer" data-answer="basics" onclick="nextSlide('slide3', 'basics')">
+                    Понять основы инвестиционного анализа
+                    </button></li>
+                <li><button class="button-answer" data-answer="improve" onclick="nextSlide('slide3', 'improve')">
+                    Повысить эффективность своих текущих стратегий
+                    </button></li>
+                <li><button class="button-answer" data-answer="develop" onclick="nextSlide('slide3', 'develop')">
+                    Разработать более сложные и прибыльные стратегии
+                    </button></li>
+                <li><button class="button-answer" data-answer="professional" onclick="nextSlide('slide3', 'professional')">
+                    Достичь уровня профессионального инвестора
+
+                    </button></li>
+            </ul>
+        </div>
+        <div class="slide" id="slide3">
+            <div class="slide-wrapper">
+                <h2>Сколько времени в день вы готовы уделять изучению материалов курса?
+
+
+                </h2>
+            </div>
+            <ul>
+                <li><button class="button-answer" onclick="nextSlide('slide4', 'less_than_1')">
+                    Менее 1 часа
+                    </button></li>
+                <li><button class="button-answer" onclick="nextSlide('slide4', '1_to_2')">
+                    1-2 часа
+                    </button></li>
+                <li><button class="button-answer" onclick="nextSlide('slide4', '2_to_4')">
+                    2-4 часа
+                    </button></li>
+                <li><button class="button-answer" onclick="nextSlide('slide4', 'more_than_4')">
+                    Более 4 часов
+
+                    </button></li>
+            </ul>
+        </div>
+        <div class="slide" id="slide4">
+            <div class="slide-wrapper">
+                <h2>Какой вид контента вам наиболее удобен для обучения?
+                </h2>
+            </div>
+            <ul>
+                <li><button class="button-answer" onclick="nextSlide('slide5', 'videos')">
+                    Видеоуроки и презентации
+
+                    </button></li>
+                <li><button class="button-answer" onclick="nextSlide('slide5', 'webinars')">
+                    Онлайн вебинары с экспертами
+                    </button></li>
+                <li><button class="button-answer" onclick="nextSlide('slide5', 'articles')">
+                    Статьи и учебные материалы для чтения
+                    </button></li>
+                <li><button class="button-answer" onclick="nextSlide('slide5', 'practical')">
+                    Практические упражнения и интерактивные задания
+                    </button></li>
+            </ul>
+        </div>
+        <div class="slide" id="slide5">
+            <div class="result-container">
+                <div class="form-container">
+                    <div class="title-wrapper">
+                        <h3>Спасибо за участие в нашем квизе!</h3>
+                        <p class="paragraph">Пожалуйста, оставьте свои контактные данные, чтобы мы могли отправить вам результаты квиза и предложить персонализированные рекомендации по обучению.</p>
+                    </div>
+                    <div class="quiz-results">
+                        <p class="paragraph">Ваш уровень знаний: <span id="knowledgeLevel"></span></p>
+                        <p class="paragraph">Тип активов, которыми вы планируете торговать: <span id="assetType"></span></p>
+                    </div>
+                    <form id="quizForm" onsubmit="return validateForm(event)">
+                        <input type="text" id="name" name="name" placeholder="Имя" required>
+                        <input type="email" id="email" name="email" placeholder="Почта" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Телефон">
+                        <label for="list">Предпочтительный формат обучения:</label>
+                        <select name="learning-list" id="list">
+                            <option value="videos"> Видеоуроки и презентации
+                            </option>
+                            <option value="webinars">Онлайн вебинары с экспертами</option>
+                            <option value="articles">Статьи и учебные материалы</option>
+                            <option value="practical">Статьи и учебные материалы для чтения</option>
+                            <option value="consultations">Практические упражнения и интерактивные задания</option>
+                        </select>
+                        <label for="message">Комментарий или вопрос:</label>
+                        <textarea id="message" name="message" rows="2"></textarea>
+                        <button type="submit" class="form-button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section" id="blog">
+        <div class="center-align column">
+            <div class="section-wrapper">
+                <div class="blog-text-wrapper">
+                    <p class="paragraph-big">Преимущества курса</p>
+                    <div class="benefits-wrapper">
+                        <div class="benefits-item">
+                            <div class="benefits-img">01</div>
+                            <p class="paragraph">Индивидуальный подход: обучение, адаптированное к вашему уровню знаний и опыту.
+                            </p>
+                        </div>
+                        <div class="benefits-item">
+                            <div class="benefits-img">02</div>
+                            <p class="paragraph">Практическое применение: реальные кейсы и задания, которые помогут вам применить теорию на практике.</p>
+                        </div>
+                        <div class="benefits-item">
+                            <div class="benefits-img">03</div>
+                            <p class="paragraph">Эксклюзивные материалы: доступ к аналитике и инсайдерской информации от ведущих трейдеров.</p>
+                        </div>
+                        <div class="benefits-item">
+                            <div class="benefits-img">04</div>
+                            <p class="paragraph">Постоянная поддержка: наши эксперты всегда готовы помочь вам советами и консультациями.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/blog1.jpg" alt="" class="blog-img">
+            </div>
+            <div class="section-wrapper">
+                <img src="img/blog-img2.jpg" alt="" class="blog-img">
+                <div class="blog-text-wrapper">
+                    <p class="paragraph-big">Форматы обучения</p>
+                    <div class="benefits-wrapper">
+                        <div class="benefits-item">
+                            <div class="benefits-img">01</div>
+                            <p class="paragraph">Видеолекции: доступные и информативные видеоуроки для всех уровней.
+                            </p>
+                        </div>
+                        <div class="benefits-item">
+                            <div class="benefits-img">02</div>
+                            <p class="paragraph">Вебинары: интерактивные сессии с возможностью задать вопросы нашим экспертам.</p>
+                        </div>
+                        <div class="benefits-item">
+                            <div class="benefits-img">03</div>
+                            <p class="paragraph">Статьи и руководства: подробные материалы для углубленного изучения темы.</p>
+                        </div>
+                        <div class="benefits-item">
+                            <div class="benefits-img">04</div>
+                            <p class="paragraph">Практические задания: упражнения, которые помогут закрепить знания и навыки.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="paragraph-big">Отзывы</p>
+            <div class="section-wrapper">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+                                <div class="testimonials-name">
+                                    <div class="testimonials-img">
+                                        <img src="img/testim1.jpg" alt="" class="testimonial-img">
+                                    </div>
+                                    <p class="paragraph">Александра И.
+                                    </p>
+                                </div>
+                                <div class="testimonials-text">
+                                    <p class="paragraph">Этот курс открыл для меня новые горизонты! Я никогда раньше не торговала, но благодаря четкой структуре и поддержке преподавателей я смогла уверенно начать свою торговлю на бирже.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+                                <div class="testimonials-name">
+                                    <div class="testimonials-img">
+                                        <img src="img/testim2.jpg" alt="" class="testimonial-img">
+                                    </div>
+                                    <p class="paragraph">Татьяна М.
+                                    </p>
+                                </div>
+                                <div class="testimonials-text">
+                                    <p class="paragraph">Удивительное обучение! Видеоуроки и вебинары действительно помогли мне понять сложные концепции. Я уже вижу положительные результаты в своей торговле!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+                                <div class="testimonials-name">
+                                    <div class="testimonials-img">
+                                        <img src="img/testim3.jpg" alt="" class="testimonial-img">
+                                    </div>
+                                    <p class="paragraph">Виктория С.
+                                    </p>
+                                </div>
+                                <div class="testimonials-text">
+                                    <p class="paragraph">Я занималась трейдингом на любительском уровне, но после прохождения курса мои навыки значительно улучшились. Инструкторы великолепны, и материал очень качественный.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+                                <div class="testimonials-name">
+                                    <div class="testimonials-img">
+                                        <img src="img/testim8.jpg" alt="" class="testimonial-img">
+                                    </div>
+                                    <p class="paragraph">Влад К.
+                                    </p>
+                                </div>
+                                <div class="testimonials-text">
+                                    <p class="paragraph">Отличный курс для всех уровней подготовки! Я был абсолютным новичком, но теперь уверенно разбираюсь в основных аспектах трейдинга и уже делаю свои первые успешные сделки.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+                                <div class="testimonials-name">
+                                    <div class="testimonials-img">
+                                        <img src="img/testim4.jpg" alt="" class="testimonial-img">
+                                    </div>
+                                    <p class="paragraph">Ольга П.
+                                    </p>
+                                </div>
+                                <div class="testimonials-text">
+                                    <p class="paragraph">Курс превзошел мои ожидания! Особо понравились практические задания, которые позволили применить теорию на практике. Теперь я уверенно торгую криптовалютами и акциями.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+                                <div class="testimonials-name">
+                                    <div class="testimonials-img">
+                                        <img src="img/testim5.jpg" alt="" class="testimonial-img">
+                                    </div>
+                                    <p class="paragraph">Влада К.
+                                    </p>
+                                </div>
+                                <div class="testimonials-text">
+                                    <p class="paragraph">Этот курс стоит каждого вложенного рубля. Я получила все необходимые знания и поддержку, чтобы начать торговать на профессиональном уровне. Рекомендую всем!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+                                <div class="testimonials-name">
+                                    <div class="testimonials-img">
+                                        <img src="img/testim6.jpg" alt="" class="testimonial-img">
+                                    </div>
+                                    <p class="paragraph">Екатерина В.
+                                    </p>
+                                </div>
+                                <div class="testimonials-text">
+                                    <p class="paragraph">Прекрасное обучение для тех, кто хочет погрузиться в мир инвестиций и трейдинга. Материалы поданы доступно и понятно, а поддержка преподавателей просто отличная.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+                                <div class="testimonials-name">
+                                    <div class="testimonials-img">
+                                        <img src="img/testim7.jpg" alt="" class="testimonial-img">
+                                    </div>
+                                    <p class="paragraph">Максим Л.
+                                    </p>
+                                </div>
+                                <div class="testimonials-text">
+                                    <p class="paragraph">Я всегда боялся начать торговать из-за риска потерь. Этот курс помог мне преодолеть страхи и научил, как грамотно управлять рисками. Теперь я чувствую себя намного увереннее.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-item">
+                <h3>Crypto Bureau
+                </h3>
+            </div>
+            <div class="footer-item">
+                <h4>Контакты</h4>
+                <div class="footer-contacts-wrapper">
+                    <a href="https://maps.app.goo.gl/DUvqPt8jyqcpix4PA" class="footer-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M120-120v-556.67h163.33V-840h393.34v326.67H840V-120H528.67v-163.33h-97.34V-120H120Zm66.67-66.67h96.66v-96.66h-96.66v96.66Zm0-163.33h96.66v-96.67h-96.66V-350Zm0-163.33h96.66V-610h-96.66v96.67ZM350-350h96.67v-96.67H350V-350Zm0-163.33h96.67V-610H350v96.67Zm0-163.34h96.67v-96.66H350v96.66ZM513.33-350H610v-96.67h-96.67V-350Zm0-163.33H610V-610h-96.67v96.67Zm0-163.34H610v-96.66h-96.67v96.66Zm163.34 490h96.66v-96.66h-96.66v96.66Zm0-163.33h96.66v-96.67h-96.66V-350Z"/></svg>
+                        C. de las Huertas, 55, Centro, 28014 Madrid, Испания
+                    </a>
+                    <a href="tel:+34627957188" class="footer-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M266.67-40q-27 0-46.84-19.83Q200-79.67 200-106.67v-746.66q0-27 19.83-46.84Q239.67-920 266.67-920h426.66q27 0 46.84 19.83Q760-880.33 760-853.33v746.66q0 27-19.83 46.84Q720.33-40 693.33-40H266.67Zm0-100v33.33h426.66V-140H266.67Zm0-66.67h426.66v-546.66H266.67v546.66Zm0-613.33h426.66v-33.33H266.67V-820Zm0 0v-33.33V-820Zm0 680v33.33V-140Z"/></svg>
+                        +34627957188
+                    </a>
+                    <a href="mailto:info@cryptobureau.com" class="footer-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v54.67q0 57-39.73 96.5t-97.6 39.5q-35.72 0-67.36-16.67t-49.98-47.33q-27 32.33-65.22 48.16-38.22 15.84-80.11 15.84-79.4 0-135.37-55.5-55.96-55.5-55.96-135.18t55.96-135.83Q400.6-672 480-672t135.37 56.16q55.96 56.16 55.96 135.84v54.67q0 29.07 20.67 49.2Q712.67-356 742.33-356q29.67 0 50.34-20.13 20.66-20.13 20.66-49.2V-480q0-139.58-96.87-236.46-96.88-96.87-236.46-96.87t-236.46 96.87Q146.67-619.58 146.67-480t96.87 236.46q96.88 96.87 236.46 96.87h209.33V-80H480Zm.04-276q51.96 0 88.29-36.17 36.34-36.16 36.34-87.83 0-52.67-36.38-89-36.37-36.33-88.33-36.33T391.67-569q-36.34 36.33-36.34 89 0 51.67 36.38 87.83Q428.08-356 480.04-356Z"/></svg>
+                        info@cryptobureau.com</a>
+                </div>
+            </div>
+            <div class="footer-item">
+                    <h4>Навигация</h4>
+                    <a href="privacy.html" class="footer-link">Политика Конфиденциальности</a>
+                    <a href="terms.html" class="footer-link">Условия Пользования</a>
+            </div>
+            <div class="footer-item">
+                    <p>Вовлечение в сферу инвестиций несет в себе значительные риски, среди которых – возможность полного обесценивания вложенных средств. Осмысление и готовность к принятию таких рисков может оказаться сложной задачей для многих. Мы настоятельно советуем проявлять предельную бдительность при формировании финансовых стратегий и тщательно анализировать все возможные исходы. Важно понимать, что любое инвестиционное решение потенциально может привести к нежелательным экономическим последствиям.</p>
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookies-banner">
+            <div class="text-x">
+                <p class="text-banner">Мы используем файлы cookie, чтобы сделать ваше пребывание на нашем сайте максимально комфортным и продуктивным. Эти цифровые помощники позволяют нам адаптировать контент под ваши интересы, обеспечивать безопасность ваших данных и постоянно совершенствовать наши услуги.</p>
+                <div id="decline" class="decline"><img src="img/close_24dp_FILL0_wght400_GRAD0_opsz24.png" alt
+                        class="x-icon"></div>
+            </div>
+            <div class="cookie-button-wrapper">
+                <button id="accept-cookies" class="cookie-button w-button">Принять</button>
+                <button id="decline-cookies" class="cookie-button transparent-button w-button">Отказаться</button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 2,
+          loop: true,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+             // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+                spaceBetween: 20
+                },
+             // when window width is >= 768px
+            768: {
+              slidesPerView: 2,
+                spaceBetween: 20
+                },
+          },
+        });
+      </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
